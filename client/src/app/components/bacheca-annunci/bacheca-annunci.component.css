@@ -1,0 +1,23 @@
+.list-group{
+    align-items: center;
+}
+#mostra{
+    margin-top: 15px;
+    margin-left: 24%;
+}
+
+#title{
+    margin-top:10px;
+    font-family: 'Lucida Sans';
+    color: #fb3845;
+    font-size: 20px;
+    text-align: center;
+}
+
+#cityEvent{
+    margin-top: 10px;
+}
+
+#allEvents{
+    margin-top: 10px;
+}

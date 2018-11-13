@@ -1,0 +1,28 @@
+<body>
+<div id="title"><strong>Tutti gli eventi su TogetherWorkout:</strong></div>
+<button class="btn btn-primary"  id="mostra" (click)="filterEventsByCity()">Mostra Eventi nella tua città</button>
+<div *ngIf="clicked">
+  <ul class="list-group" id="cityEvent" *ngFor="let event of filteredEvents">
+    <li>
+        <div class="card" style="width: 12rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{event.activity}}, {{event.city}}</h5>
+              <p class="card-text">{{event.name}}, {{event.description}}</p>
+              <a  class="btn btn-primary" align="center">Iscriviti</a>
+            </div>
+          </div>
+    </li>
+  </ul>
+</div>
+    <ul class="list-group" id="allEvents" *ngFor="let event of events">
+        <li>
+            <div class="card" style="width: 12rem;">
+                <div class="card-body">
+                  <h5 class="card-title">{{event.activity}}, {{event.city}}</h5>
+                  <p class="card-text">{{event.name}}, {{event.description}}</p>
+                  <a  class="btn btn-primary" align="center">Iscriviti</a>
+                </div>
+              </div>
+        </li>
+      </ul>
+      </body>

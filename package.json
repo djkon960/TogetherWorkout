@@ -1,0 +1,23 @@
+{
+  "name": "togetherworkout",
+  "version": "0.0.1",
+  "description": "Web app fitness sharing",
+  "scripts": {
+    "setup": "concurrently \"cd client && npm install\" \"cd server && npm install\"",
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanobianconi3/TogetherWorkout"
+  },
+  "author": "Università degli Studi di Camerino, Corso di Informatica L-31",
+  "license": "MIT",
+  "homepage": "https://github.com/stefanobianconi3/TogetherWorkout#readme",
+  "dependencies": {
+    "concurrently": "^4.0.1",
+    "mysql": "^2.16.0",
+    "node": "^10.11.0"
+  }
+}

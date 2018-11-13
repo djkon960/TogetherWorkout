@@ -1,0 +1,21 @@
+#title{
+    color: #fb3845;
+    font-family: 'Arial Narrow';
+    font-size:30px;
+    text-align: center;
+}
+
+.list-group{
+    align-items: center;
+}
+#first{
+    color: black;
+    font-family: 'Gill Sans';
+    font-size: 20px;
+    text-align: center;
+}
+#bottoneCrea{
+    margin-top: 6px;
+    margin-left: 150px;
+
+}

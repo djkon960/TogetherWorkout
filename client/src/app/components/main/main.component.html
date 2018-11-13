@@ -1,0 +1,56 @@
+<div id="title">BENTORNATO SULLA NOSTRA WEB APP</div>
+
+<div id="first">Crea un evento e invita i tuoi amici</div>
+<button type="button" id="bottoneCrea" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Crea Evento
+</button>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuovo evento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form #eventform="ngForm" (ngSubmit)="createEvent(eventform)">
+      <div class="modal-body">
+          <div class="form-group">
+            <input class="form-control" ngModel #name="ngModel" type="text" name="name" id="name" placeholder="Ora">
+          </div>
+          <div class="form-group">
+            <input class="form-control" ngModel #city="ngModel" type="text" name="city" id="city" placeholder="Città">
+          </div>
+          <div class="form-group">
+            <input class="form-control" ngModel #date="ngModel" type="text" name="date" id="date" placeholder="Data: gg/mm/aaaa">
+          </div>
+          <div class="form-group">
+            <input class="form-control" ngModel #activity="ngModel" type="text" name="activity" id="activity" placeholder="Attività: corsa, passegiata, corpo libero ecc.">
+          </div>
+          <div class="form-group">
+            <input class="form-control" ngModel #description="ngModel" type="text" name="description" id="description" placeholder="Breve Descrizione">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">ANNULLA</button>
+        <button type="submit" class="btn btn-primary">CREA</button>
+      </div>
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+<div id="first">Eventi creati da te</div>
+<div *ngIf="notEvent">non hai ancora creato nessun evento</div>
+<ul class="list-group" *ngFor="let myEvent of myEvents">
+  <li>
+      <div class="card" style="width: 12rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{myEvent.name}}, {{myEvent.city}}, {{myEvent.date}}</h5>
+            <p class="card-text">{{myEvent.description}}</p>
+          </div>
+        </div>
+  </li>
+</ul>
