@@ -6,7 +6,7 @@
   }
   
   body {
-    background: rgb(250, 250, 250) url(http://lorempixel.com/1920/1080/nature/);
+    background: rgb(0, 0, 0) url(http://lorempixel.com/1920/1080/nature/);
     font-family: Lato, Helvetica, Arial, sans-serif;
   }
   
@@ -22,10 +22,10 @@
                             Navbar
     ======================================================*/
   #navbar {
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0);
     color: rgb(13, 26, 38);
     position: relative;
-    top: -10px;
+    top: -9px;
     left: -1px;
     height: 60px;
     line-height: 60px;

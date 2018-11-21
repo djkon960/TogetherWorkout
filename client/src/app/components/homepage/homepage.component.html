@@ -1,4 +1,4 @@
-
+<link rel="manifest" href="/manifest.json">
 <body id="LoginForm">
   <div class="container">
     
@@ -6,7 +6,7 @@
       <div class="main-div">
         <div class="panel">
           <h2>Login</h2>
-          <p>Please enter your email and password</p>
+          <p>Inserire E-mail e password per accedere</p>
         </div>
       
         <form id="Login" #f="ngForm" (ngSubmit)="logIn(f)">
@@ -19,13 +19,13 @@
             </div>
               
               <div class="forgot">
-                <a href="#">Forgot password?</a>
+                <a href="#">Password Dimenticata?</a>
               </div>
             
           <button type="submit" class="btn btn-primary">Login</button>
           
           <div class="register">
-            <p>non ancora dei nostri?  <a (click)="goSignin()">registrati!</a></p>
+            <p>Non ancora dei nostri?  <a (click)="goSignin()">Registrati ora!</a></p>
           </div>
         </form>
       </div>

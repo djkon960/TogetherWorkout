@@ -1,6 +1,14 @@
 #sidenavComponent{
     margin-top: 80px;
+    color: rgb(255, 0, 0);
 }
 .navbar{
-    background-color: #fb3845;
+    background-color: #000000;
+    color: rgb(255, 0, 0);
+}
+.nav-item{
+    color: rgb(255, 0, 0);
+}
+.navbarSupportedContent{
+    color: rgb(255, 0, 0);
 }

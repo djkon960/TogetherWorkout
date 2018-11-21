@@ -7,6 +7,10 @@
 
 .list-group{
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: fit-content;
 }
 #first{
     color: black;
@@ -15,7 +19,16 @@
     text-align: center;
 }
 #bottoneCrea{
-    margin-top: 6px;
-    margin-left: 150px;
-
+        position: absolute; 
+        left: 0; 
+        right: 0; 
+        margin-top: 10%;
+        margin-left: auto; 
+        margin-right: auto; 
+        width: fit-content; /* Need a specific value to work */
+        color: #fb3845;
+        background-color: black;
+      }
+.btn-primary{
+    background-color: black;
 }
