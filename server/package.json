@@ -12,7 +12,7 @@
   "author": "Francesco Nuzzo,Angelo Cirillo,Donatella Pelagaggi",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^3.0.0",
+    "bcrypt": "^3.0.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "helmet": "^3.12.1",
