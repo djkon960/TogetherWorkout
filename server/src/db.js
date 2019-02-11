@@ -1,9 +1,11 @@
 var mysql = require('mysql');
 
+const {dbConnection} = require ('../src/config/dbOptions')
+
 var connection = mysql.createPool({
-    host: 'eu-cdbr-west-02.cleardb.net',
-    user: 'bfc74830b570bd',
-    password: 'de91d475',
-    database: 'heroku_c70af9a13502034'
+    host: dbConnection.host,
+    user: dbConnection.user,
+    password: dbConnection.password,
+    database: dbConnection.database
 });
 module.exports = { connection }
