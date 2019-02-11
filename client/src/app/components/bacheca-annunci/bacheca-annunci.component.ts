@@ -13,18 +13,30 @@ export class BachecaAnnunciComponent implements OnInit {
   private clicked:boolean=false;
 
   constructor(private data: DataService) { 
-    
+  }
+  ngOnInit() {
     this.data.getEvents().subscribe(
       (payload) => {
         if (payload['success']) {
           this.events=payload['data']
+          for(let i = 0; i<this.events.length; i++){
+            let author = ""
+            this.data.getEventAuthor(this.events[i]['idCreator']).subscribe(
+              (payload2) => {
+                if (payload2['success']){
+                  author = payload2['data'][0]['firstname'] + ' ' + payload2['data'][0]['lastname']
+                  this.events[i]['author'] = author
+                } else {
+                  console.log(payload2['error'])
+                }
+              }
+            )
+          }
         } else {
           console.log(payload['error'])
         }
       }
     )
-  }
-  ngOnInit() {
   }
 
   filterEventsByCity(){
@@ -36,6 +48,10 @@ export class BachecaAnnunciComponent implements OnInit {
         }
       }
     )
+  }
+  
+  subscribeEvent(){
+    //TODO Sottoscriversi ad un evento
   }
 
 }

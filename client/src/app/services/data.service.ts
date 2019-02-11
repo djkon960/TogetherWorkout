@@ -49,4 +49,8 @@ export class DataService {
     return this.http.post(this.APIURL+'/userprofile', {id: id, height: height, weight: weight}, { headers: this.headers })
   }
 
+  getEventAuthor(id){
+    return this.http.post(this.APIURL+'/eventowner', {id: id}, { headers: this.headers })
+  }
+
 }

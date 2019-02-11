@@ -197,5 +197,31 @@ router.post('/userprofile', async (req, res) => {
     })
 })
 
+//Prende l'autore di ogni evento//
+router.post('/eventowner', async (req, res) => {
+    connection.getConnection(function (err, connection) {
+        if(err){
+            res.send({
+                success: false,
+                error: error
+            })
+        } else {
+            connection.query('select u.firstname, u.lastname from user as u, events as e where u.id=? and u.id = e.idCreator', req.body.id, function (err, results, fields){
+                connection.release();
+                if (err) {
+                    res.send({
+                        success: false,
+                        error: err
+                    })
+                } else {
+                    res.send({
+                        success: true,
+                        data: results
+                    })
+                }
+            })
+        }
+    })
+})
 
 module.exports = router

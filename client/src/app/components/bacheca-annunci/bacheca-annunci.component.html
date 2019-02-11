@@ -10,7 +10,7 @@
     <li>
         <div class="card" style="width: 12rem;">
             <div class="card-body">
-              <h5 class="card-title">{{event.activity}}, {{event.city}}</h5>
+              <h5 class="card-title">{{event.author}} ,{{event.activity}}, {{event.city}}</h5>
               <p class="card-text">{{event.name}}, {{event.description}}</p>
               <a  class="btn btn-primary" align="center">Iscriviti</a>
             </div>
@@ -22,9 +22,9 @@
         <li>
             <div class="card" style="width: 12rem;">
                 <div class="card-body">
-                  <h5 class="card-title">{{event.activity}}, {{event.city}}</h5>
+                  <h5 class="card-title">{{event.author}}, {{event.activity}}, {{event.city}}</h5>
                   <p class="card-text">{{event.name}}, {{event.description}}</p>
-                  <a  class="btn btn-primary" align="center">Iscriviti</a>
+                  <a (click)="subscribeEvent()" class="btn btn-primary" align="center">Iscriviti</a>
                 </div>
               </div>
         </li>
