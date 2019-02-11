@@ -251,4 +251,31 @@ router.post('/subscribeevent', async (req, res) => {
     })
 })
 
+router.post('/geteventssubscribedbyid', async (req, res) => {
+    connection.getConnection(function (err, connection) {
+        if(err){
+            res.send({
+                success: false,
+                error: error
+            })
+        } else {
+            connection.query('select * from events as e, iscrizioneeventi as i where i.idUtente = ?' +
+                'and i.idEvento = e.id', req.body.idUtente, function (err, results, fields){
+                    connection.release();
+                    if (err) {
+                        res.send({
+                            success: false,
+                            error: err
+                        })
+                    } else {
+                        res.send({
+                            success: true,
+                            data: results
+                        })
+                    } 
+                })
+        }
+    })
+})
+
 module.exports = router

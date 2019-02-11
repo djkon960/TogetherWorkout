@@ -57,4 +57,8 @@ export class DataService {
     return this.http.post(this.APIURL+'/subscribeevent', {idUtente: idUtente, idEvento: idEvento}, { headers: this.headers })
   }
 
+  getEventsSubscribedById(idUtente){
+    return this.http.post(this.APIURL+'/geteventssubscribedbyid', {idUtente: idUtente}, { headers: this.headers })
+  }
+
 }

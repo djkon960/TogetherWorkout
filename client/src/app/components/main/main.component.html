@@ -55,3 +55,25 @@
         </div>
   </li>
 </ul>
+
+<div id="eventsSubscribed" *ngIf="eventsSubscribed.length > 0">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Eventi a cui sei iscritto</h1>
+  <ul class="list-group" id="allEvents" *ngFor="let event of eventsSubscribed">
+    <li>
+        <div class="card" style="width: 12rem;">
+            <div class="card-body">
+              <h5 class="card-title">{{event.author}}, {{event.activity}}, {{event.city}}</h5>
+              <p class="card-text">{{event.name}}, {{event.description}}</p>
+            </div>
+          </div>
+    </li>
+  </ul>
+</div>
