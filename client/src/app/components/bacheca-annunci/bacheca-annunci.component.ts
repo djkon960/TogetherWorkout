@@ -50,8 +50,16 @@ export class BachecaAnnunciComponent implements OnInit {
     )
   }
   
-  subscribeEvent(){
-    //TODO Sottoscriversi ad un evento
+  subscribeEvent(id){
+    this.data.subscribeEvent(localStorage.getItem('id'), id).subscribe(
+      (payload) => {
+        if (payload['success']) {
+          alert(payload['data'])
+        } else {
+          alert("Sei giá iscritto a questo evento")
+        }
+      }
+    )
   }
 
 }

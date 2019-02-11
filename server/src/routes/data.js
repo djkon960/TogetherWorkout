@@ -224,4 +224,31 @@ router.post('/eventowner', async (req, res) => {
     })
 })
 
+router.post('/subscribeevent', async (req, res) => {
+    connection.getConnection(function (err, connection) {
+        if(err){
+            res.send({
+                success: false,
+                error: error
+            })
+        } else {
+            let insertionArray = [req.body.idUtente, req.body.idEvento]
+            connection.query('insert into iscrizioneeventi (idUtente, idEvento) values (?, ?)', insertionArray, function (err, results, fields){
+                connection.release();
+                if (err) {
+                    res.send({
+                        success: false,
+                        error: err
+                    })
+                } else {
+                    res.send({
+                        success: true,
+                        data: "Iscrizione avvenuta con successo"
+                    })
+                }
+            })
+        }
+    })
+})
+
 module.exports = router

@@ -24,7 +24,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{event.author}}, {{event.activity}}, {{event.city}}</h5>
                   <p class="card-text">{{event.name}}, {{event.description}}</p>
-                  <a (click)="subscribeEvent()" class="btn btn-primary" align="center">Iscriviti</a>
+                  <a (click)="subscribeEvent(event.id)" class="btn btn-primary" align="center">Iscriviti</a>
                 </div>
               </div>
         </li>
