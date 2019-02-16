@@ -1,28 +1,28 @@
-<link rel="manifest" href="/manifest.json">
+
 <body id="SigninForm">
   <div class="container">
     
     <div class="signin-form">
       <div class="main-div">
         <div class="panel">
-          <h2>Register</h2>
+          <br><br><h2>Pagina di Registrazione</h2>
         </div>
       
         <form #signinf="ngForm" (ngSubmit)="signIn(signinf)">
           <div class="form-group">
-              <input class="form-control" ngModel #firstname="ngModel" type="text" name="firstname" id="firstname"  placeholder="Name">
+              <input class="form-control" ngModel #firstname="ngModel" type="text" name="firstname" id="firstname"  placeholder="Nome">
             </div>
 
           <div class="form-group">
-              <input class="form-control" ngModel #lastname="ngModel" type="text" name="lastname" id="lastname" placeholder="Last name">
+              <input class="form-control" ngModel #lastname="ngModel" type="text" name="lastname" id="lastname" placeholder="Cognome">
             </div>
 
           <div class="form-group">
-            <input type="email" class="form-control"  ngModel #email="ngModel" name="email" id="email" placeholder="Email Address">
+            <input type="email" class="form-control"  ngModel #email="ngModel" name="email" id="email" placeholder="Indirizzo E-Mail">
           </div>
 
           <div class="form-group">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Check email">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Ripeti E-Mail">
           </div>
 
           <div class="form-group">
@@ -30,17 +30,17 @@
           </div>
 
           <div class="form-group">
-            <input type="password" class="form-control" id="inputPassword" placeholder="Check Password">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Ripeti Password">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" ngModel #date="ngModel" name="date" placeholder="Your Birth Date gg/mm/aaaa">
+            <input type="text" class="form-control" ngModel #date="ngModel" name="date" placeholder="Data di nascita gg/mm/aaaa">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" ngModel #city="ngModel" name="city" placeholder="Your City">
+            <input type="text" class="form-control" ngModel #city="ngModel" name="city" placeholder="La tua città">
           </div>
           
           
-          <button type="submit" class="btn btn-primary">Register</button>          
+          <button type="submit" class="btn btn-primary">Registrati</button>          
 
 
         </form>
