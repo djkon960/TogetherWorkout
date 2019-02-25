@@ -3,7 +3,8 @@ body#LoginForm{
     background-position:center; 
     background-size:cover;
     height: 100%;
-  margin-top: 40%;}
+    margin-top: 8rem;
+}
 
 .form-heading { color:#fff; font-size:23px;}
 .panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
@@ -22,7 +23,6 @@ body#LoginForm{
   color: #777777;
   font-size: 14px;
   text-decoration: underline;
-
   margin-left: 70px;
 }
 .login-form  .btn.btn-primary {
@@ -36,7 +36,9 @@ body#LoginForm{
   padding: 0;
 }
 .forgot {
-  text-align: left; margin-bottom:30px;
+  text-align: center;
+  margin-bottom:30px;
+  margin-right: 5.5rem;
 }
 
 .back { text-align: left; margin-top:10px;}

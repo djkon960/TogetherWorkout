@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/djkon960/TogetherWorkout"
   },
-  "author": "Università degli Studi di Camerino, Corso di Informatica L-31",
+  "author": "Francesco Nuzzo, Angelo Cirillo, Donatella Pelagaggi",
   "license": "MIT",
-  "homepage": "https://github.com/djkon960/TogetherWorkout#readme"
+  "homepage": "https://github.com/djkon960/TogetherWorkout#readme",
+  "dependencies": {
+    "bootbox": "^4.4.0"
+  }
 }

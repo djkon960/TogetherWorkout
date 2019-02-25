@@ -57,6 +57,7 @@
   } @media(max-width: 768px) {
       .logo {
       margin-left: 5px;
+      margin-top: 10px;
       }
     }
   

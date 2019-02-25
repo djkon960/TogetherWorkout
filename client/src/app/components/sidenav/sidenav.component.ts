@@ -39,7 +39,6 @@ export class SidenavComponent implements OnInit {
   ngOnInit() {
     if(localStorage.getItem('id')){
       this.isLogged=true;
-
     }
   }
 

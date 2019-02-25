@@ -35,7 +35,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">ANNULLA</button>
-        <button type="submit" class="btn btn-primary">CREA</button>
+        <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#eventCreated" data-dismiss="modal" >CREA</button>
+        
       </div>
       </form>
       
@@ -43,8 +44,33 @@
   </div>
 </div>
 
-<div id="first">Eventi creati da te</div>
-<div *ngIf="notEvent">non hai ancora creato nessun evento</div>
+
+<!-- Modal -->
+<div class="modal fade" id="eventCreated" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Evento Creato</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <ul class="list-group" *ngFor="let myEvent of myEvents">
   <li>
       <div class="card" style="width: 12rem;">
@@ -65,7 +91,7 @@
   <br>
   <br>
   <br>
-  <h1>Eventi a cui sei iscritto</h1>
+  <h2>Eventi a cui sei iscritto</h2>
   <ul class="list-group" id="allEvents" *ngFor="let event of eventsSubscribed">
     <li>
         <div class="card" style="width: 12rem;">
