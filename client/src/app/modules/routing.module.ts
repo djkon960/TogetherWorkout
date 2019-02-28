@@ -24,8 +24,9 @@ const routes:Routes = [
   {
     path:'homepage',
     component: HomepageComponent,
-    canActivate:[AuthguardService]
+    canActivate:[AuthguardService] // autenticazione salvata in locale per evitare sovracarichi al server 
   },
+
   {
     path:'supporto',
     component: SupportoComponent,
