@@ -223,7 +223,7 @@ router.post('/eventowner', async (req, res) => {
         }
     })
 })
-
+    //iscrizione e venti //
 router.post('/subscribeevent', async (req, res) => {
     connection.getConnection(function (err, connection) {
         if(err){
@@ -250,7 +250,7 @@ router.post('/subscribeevent', async (req, res) => {
         }
     })
 })
-
+  // seleziona gli eventi a cui sei iscritto  //
 router.post('/geteventssubscribedbyid', async (req, res) => {
     connection.getConnection(function (err, connection) {
         if(err){

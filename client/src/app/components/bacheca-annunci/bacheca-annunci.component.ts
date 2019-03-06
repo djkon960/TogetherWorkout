@@ -14,6 +14,8 @@ export class BachecaAnnunciComponent implements OnInit {
 
   constructor(private data: DataService) { 
   }
+
+//ritorna nel main gli eventi a cui sei iscritto   
   ngOnInit() {
     this.data.getEvents().subscribe(
       (payload) => {
@@ -39,6 +41,7 @@ export class BachecaAnnunciComponent implements OnInit {
     )
   }
 
+//filtra gli eventi in base alla città dell'utente salvata len browser  
   filterEventsByCity(){
     this.clicked=true;
     this.filteredEvents = this.events.filter(
@@ -50,6 +53,7 @@ export class BachecaAnnunciComponent implements OnInit {
     )
   }
   
+//iscrizione evento con controllo se sei già iscritto  
   subscribeEvent(id){
     this.data.subscribeEvent(localStorage.getItem('id'), id).subscribe(
       (payload) => {
